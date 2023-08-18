@@ -23,6 +23,6 @@
   <title>EWA Employee</title>
 </svelte:head>
 
-<div class="container max-w-lg mx-auto min-h-screen p-4">
+<div class="container max-w-lg mx-auto min-h-screen bg-gray-200">
   <slot />
 </div>
