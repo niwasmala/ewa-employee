@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>User Management</title>
+  <title>EWA Employee</title>
 </svelte:head>
 
 <div class="px-4 py-12 md:py-24">

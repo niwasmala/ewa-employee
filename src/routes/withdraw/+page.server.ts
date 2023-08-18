@@ -9,7 +9,7 @@ export const load = async ({ locals: { supabase, getSession } }) => {
 
   const { data: employee } = await supabase
     .from('ewa_employee')
-    .select('id, name')
+    .select('id, name, company_id')
     .eq('user_id', session.user.id)
     .single()
 
@@ -37,7 +37,7 @@ export const actions = {
 
     const { data: employee } = await supabase
       .from('ewa_employee')
-      .select('id, name')
+      .select('id, name, company_id')
       .eq('user_id', session.user.id)
       .single()
 
@@ -75,6 +75,7 @@ export const actions = {
       .from('ewa_withdrawal')
       .insert({ 
         employee_id: employee.id, 
+        company_id: employee.company_id, 
         salary_id: salary.id,
         amount,
         reason,
